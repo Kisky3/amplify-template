@@ -1,5 +1,39 @@
-type Todo @model {
+type Todo @model
+@auth(rules: [{allow: owner}]) {
   id: ID!
   name: String!
   description: String
+}
+
+type RequestList @model
+@key(fields: ["recycle_request_id", "createdAt"])
+@key(name: "listByStatus", fields:["bid_status", "dead_line"], queryField: "listSortedByStatus") {
+  recycle_request_id: String!
+  dead_line: String!
+  bid_count: Int
+  bid_status: String
+  prif_id: Int
+  city_id: Int
+  category2_id: [Int]
+  category3_id: [Int]
+  item_data: AWSJSON
+  user_data: AWSJSON
+  lat: Int
+  long: Int
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime
+  TTL: AWSTimestamp
+}
+
+type RequesBid @model
+@key(fields: ["recycle_request_id", "seq_user_id"])
+@auth(rules: [{allow: owner}]) {
+  recycle_request_id: String!
+  seq_user_id: Int!
+  item_data: AWSJSON
+  user_data: AWSJSON
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+  TTL: AWSTimestamp
+  owner: String
 }
