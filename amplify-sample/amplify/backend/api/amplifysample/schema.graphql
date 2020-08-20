@@ -28,6 +28,7 @@ type RequestList @model
 type RequesBid @model
 @key(fields: ["recycle_request_id", "seq_user_id"])
 @auth(rules: [{allow: owner}]) {
+  id: ID!
   recycle_request_id: String!
   seq_user_id: Int!
   item_data: AWSJSON

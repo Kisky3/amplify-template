@@ -1,0 +1,58 @@
+{
+    "recycle_request_id": "110e8400-e29b-41d4-a716-446655440000",
+    "seq_user_id": 888888,
+    "item_data": {
+        "items": [
+            {
+                "request_comment": "商品情報JSON2",
+                "attributes": {
+                    "sort": 1,
+                    "format": "333",
+                    "attribute": "111"
+                },
+                "images": {
+                    "url_width": 300,
+                    "url_height": 300,
+                    "image": "http://img-cdn.jg.jugem.jp/f65/2313293/20120123_80313.jpg",
+                    "id": 1,
+                    "cache_id": 111
+                },
+                "category1": 131,
+                "category2": 222,
+                "category3": 333,
+                "min_price": 1300,
+                "max_price": 3000,
+                "buy_condition": "いつでもよい"
+            },
+            {
+                "request_comment": "商品情報JSON",
+                "attributes": {
+                    "sort": 1,
+                    "format": "333",
+                    "attribute": "111"
+                },
+                "images": {
+                    "url_width": 300,
+                    "url_height": 300,
+                    "image": "http://img-cdn.jg.jugem.jp/f65/2313293/20120123_80313.jpg",
+                    "id": 1,
+                    "cache_id": 111
+                },
+                "category1": 131,
+                "category2": 222,
+                "category3": 333,
+                "min_price": 1300,
+                "max_price": 3000,
+                "buy_condition": "いつでもよい"
+            }
+        ],
+        "visit_cost": 3000,
+        "bring_buy_enable_flg": 0,
+        "visit_buy_enable_flg": 0,
+        "deliver_buy_enable_flg": 0
+    },
+    "createdAt": "2015-12-21T17:42:34Z",
+    "updatedAt": "2015-12-21T17:42:34Z",
+    "TTL": 1560000000,
+    "owner": "kisky3@126.com"
+}

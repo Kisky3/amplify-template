@@ -1,0 +1,13 @@
+## [Start] Set the primary @key. **
+#set( $modelObjectKey = {
+  "recycle_request_id": $util.dynamodb.toDynamoDB($ctx.args.recycle_request_id),
+  "createdAt": $util.dynamodb.toDynamoDB($ctx.args.createdAt)
+} )
+## [End] Set the primary @key. **
+{
+  "version": "2018-05-29",
+  "operation": "GetItem",
+  "key": #if( $modelObjectKey ) $util.toJson($modelObjectKey) #else {
+  "id": $util.dynamodb.toDynamoDBJson($ctx.args.id)
+} #end
+}
